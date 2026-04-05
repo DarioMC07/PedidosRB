@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand -->
+    <color name="rb_green">#0B7A2E</color>
+    <color name="rb_green_dark">#075622</color>
+    <color name="rb_green_soft">#E6F4EA</color>
+
+    <!-- Surface -->
+    <color name="rb_surface">#FFFFFFFF</color>
+    <color name="rb_on_green">#FFFFFFFF</color>
+
+    <!-- Client / form (reference style) -->
+    <color name="rb_grey_bg">#F5F5F5</color>
+    <color name="rb_text_primary">#212121</color>
+    <color name="rb_text_secondary">#757575</color>
+    <color name="rb_hint_black">#212121</color>
+    <color name="rb_divider">#E0E0E0</color>
+    <color name="rb_mint_selected">#DFF5E7</color>
+    <color name="rb_chip_unselected">#EEEEEE</color>
+    <color name="rb_nav_inactive">#9E9E9E</color>
+</resources>

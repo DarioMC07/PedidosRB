@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_types">
+        <item>Volantes</item>
+        <item>Díptico</item>
+        <item>Tríptico</item>
+        <item>Revistas</item>
+        <item>Afiches</item>
+        <item>Tiraje</item>
+    </string-array>
+
+    <string-array name="paper_grams">
+        <item>60 g</item>
+        <item>80 g</item>
+        <item>100 g</item>
+        <item>75 g</item>
+        <item>160 g</item>
+        <item>250 g</item>
+        <item>350 g</item>
+    </string-array>
+</resources>

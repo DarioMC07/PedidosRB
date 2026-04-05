@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177942545676",
+    "project_id": "rbpedidos-ff0d8",
+    "storage_bucket": "rbpedidos-ff0d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177942545676:android:cd7de7345539667ef3f529",
+        "android_client_info": {
+          "package_name": "com.example.rosabetaniapedidos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt0ty48_qR9dnrIu9aW_CZOP85oBDiyK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

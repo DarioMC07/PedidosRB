@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">RosaBetaniaPedidos</string>
+    <string name="logo_content_description">Logotipo Rosa Betania, imprenta consciente</string>
+
+    <string name="login_title">Iniciar sesión</string>
+    <string name="login_subtitle">Accede para registrar pedidos</string>
+    <string name="login_user_label">Usuario</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_forgot">¿Olvidaste tu contraseña?</string>
+
+    <string name="error_required">Este campo es obligatorio</string>
+
+    <string name="client_brand_name">Rosa Betania</string>
+    <string name="client_configure_title">Configure su impresión</string>
+    <string name="client_configure_subtitle">Defina las especificaciones técnicas para su nuevo trabajo de impresión.</string>
+    <string name="client_job_name_label">Nombre del trabajo</string>
+    <string name="client_job_name_hint">Ej. Catálogo otoño 2024</string>
+    <string name="client_job_type_label">Tipo de trabajo</string>
+    <string name="client_job_type_hint">Seleccione una opción</string>
+    <string name="client_quantity_label">Cantidad</string>
+    <string name="client_measures_label">Medidas</string>
+    <string name="client_length_label">Largo</string>
+    <string name="client_width_label">Ancho</string>
+    <string name="client_observation_label">Observación</string>
+    <string name="client_observation_hint">Detalles adicionales (opcional)</string>
+    <string name="client_material_label">Material sugerido</string>
+    <string name="client_material_couche">Papel couché</string>
+    <string name="client_material_bond">Papel bond</string>
+    <string name="client_material_cartulina">Cartulina</string>
+    <string name="client_gramaje_label">Gramaje del papel</string>
+    <string name="client_gramaje_placeholder">Seleccione el gramaje</string>
+    <string name="client_delivery_info">Entrega orientativa en 3–5 días hábiles.</string>
+    <string name="client_submit">Solicitar</string>
+    <string name="client_hero_tag">Proceso maestro</string>
+    <string name="client_nav_orders">Pedidos</string>
+    <string name="client_nav_new">Nuevo trabajo</string>
+    <string name="client_nav_history">Historial</string>
+    <string name="client_nav_settings">Ajustes</string>
+    <string name="client_nav_placeholder">Función disponible próximamente.</string>
+    <string name="client_nav_new_current">Ya está en la pantalla de nuevo trabajo.</string>
+    <string name="client_session_label">Sesión: %1$s</string>
+    <string name="client_submit_placeholder">Solicitud registrada (conexión con servidor en desarrollo).</string>
+    <string name="client_profile_content_description">Cuenta y cerrar sesión</string>
+    <string name="client_hero_content_description">Impresión industrial de alta calidad</string>
+    <string name="logout">Cerrar sesión</string>
+</resources>
