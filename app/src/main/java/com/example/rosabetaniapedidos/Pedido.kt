@@ -1,19 +1,23 @@
 package com.example.rosabetaniapedidos
 
 import com.google.firebase.Timestamp
+import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.ServerTimestamp
 
 data class Pedido(
-    val cliente_email: String = "",
-    val nombre_trabajo: String = "",
-    val tipo_trabajo: String = "",
-    val cantidad: Int = 0,
-    val largo_cm: Double = 0.0,
-    val ancho_cm: Double = 0.0,
-    val observaciones: String = "",
-    val material: String = "",
-    val gramaje: String = "",
-    val estado: String = "Pendiente",
+    @DocumentId
+    var id: String = "",
+    var cliente_email: String = "",
+    var nombre_trabajo: String = "",
+    var tipo_trabajo: String = "",
+    var cantidad: Int = 0,
+    var largo_cm: Double = 0.0,
+    var ancho_cm: Double = 0.0,
+    var observaciones: String = "",
+    var material: String = "",
+    var gramaje: String = "",
+    var estado: String = "Pendiente",
+    var precio_cotizado: Double? = null,
     @ServerTimestamp
-    val fecha_creacion: Timestamp? = null
+    var fecha_creacion: Timestamp? = null
 )

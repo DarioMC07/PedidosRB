@@ -28,6 +28,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MisPedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminProduccionActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

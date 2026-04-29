@@ -18,7 +18,11 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (auth.currentUser != null) {
-            startActivity(Intent(this, ClientActivity::class.java))
+            if (auth.currentUser?.email == "admin@admin.com") {
+                startActivity(Intent(this, AdminActivity::class.java))
+            } else {
+                startActivity(Intent(this, ClientActivity::class.java))
+            }
             finish()
         }
     }
@@ -69,7 +73,11 @@ class LoginActivity : AppCompatActivity() {
                     btnLogin.text = originalText
 
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, ClientActivity::class.java))
+                        if (auth.currentUser?.email == "admin@admin.com") {
+                            startActivity(Intent(this, AdminActivity::class.java))
+                        } else {
+                            startActivity(Intent(this, ClientActivity::class.java))
+                        }
                         finish()
                     } else {
                         tilPassword.error = task.exception?.localizedMessage ?: "No se pudo iniciar sesión"

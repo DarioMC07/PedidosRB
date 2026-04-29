@@ -81,7 +81,10 @@ class ClientActivity : AppCompatActivity() {
         PopupMenu(this, anchor).apply {
             menuInflater.inflate(R.menu.menu_profile, menu)
             setOnMenuItemClickListener { item ->
-                if (item.itemId == R.id.action_logout) {
+                if (item.itemId == R.id.action_mis_pedidos) {
+                    startActivity(Intent(this@ClientActivity, MisPedidosActivity::class.java))
+                    true
+                } else if (item.itemId == R.id.action_logout) {
                     auth.signOut()
                     goToLogin()
                     true
