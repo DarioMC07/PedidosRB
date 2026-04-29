@@ -51,7 +51,7 @@ class PedidoAdapter(
             tvDetalles.text = "${pedido.cantidad} unid. | ${pedido.tipo_trabajo} | ${pedido.largo_cm}×${pedido.ancho_cm} cm | ${pedido.material}"
             
             if (pedido.precio_cotizado != null) {
-                tvPrecio.text = "Precio: $${pedido.precio_cotizado}"
+                tvPrecio.text = "BOB ${pedido.precio_cotizado}"
             } else {
                 tvPrecio.text = "Precio por definir"
             }

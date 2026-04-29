@@ -89,7 +89,7 @@ class MisPedidosActivity : AppCompatActivity() {
         val btnReject = dialogView.findViewById<android.view.View>(R.id.btnRejectPrice)
         val btnConfirm = dialogView.findViewById<android.view.View>(R.id.btnConfirmPrice)
 
-        tvPriceAmount.text = "$${pedido.precio_cotizado}"
+        tvPriceAmount.text = "BOB ${pedido.precio_cotizado}"
 
         val dialog = MaterialAlertDialogBuilder(this, com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered)
             .setView(dialogView)

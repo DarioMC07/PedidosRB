@@ -53,7 +53,7 @@ class ProduccionAdapter(
                               "${pedido.largo_cm}×${pedido.ancho_cm} cm | ${pedido.material}"
 
             tvPrecio.text = if (pedido.precio_cotizado != null)
-                "Precio: $${pedido.precio_cotizado}"
+                "BOB ${pedido.precio_cotizado}"
             else
                 "Precio no asignado"
 
