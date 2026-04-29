@@ -426,6 +426,91 @@
                                 android:textColorHint="@color/rb_hint_black" />
                         </com.google.android.material.textfield.TextInputLayout>
 
+                        <!-- ── Sección: Imagen de diseño ────────────────── -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:letterSpacing="0.08"
+                            android:text="IMAGEN DEL DISEÑO"
+                            android:textAllCaps="true"
+                            android:textColor="@color/rb_text_secondary"
+                            android:textSize="11sp" />
+
+                        <!-- Zona de selección / preview -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardImagePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:cardBackgroundColor="@color/rb_grey_bg"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/rb_divider"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <!-- Estado: sin imagen seleccionada -->
+                                <LinearLayout
+                                    android:id="@+id/layoutNoImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:contentDescription="@null"
+                                        android:src="@drawable/ic_add_photo_24"
+                                        app:tint="@color/rb_text_secondary" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="Toca para adjuntar imagen"
+                                        android:textColor="@color/rb_text_secondary"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                                <!-- Estado: imagen seleccionada -->
+                                <LinearLayout
+                                    android:id="@+id/layoutWithImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/ivImagePreview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="180dp"
+                                        android:contentDescription="Vista previa del diseño"
+                                        android:scaleType="centerCrop" />
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnChangeImage"
+                                        style="@style/Widget.Material3.Button.TextButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="36dp"
+                                        android:layout_marginTop="8dp"
+                                        android:text="Cambiar imagen"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/rb_green_dark"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"

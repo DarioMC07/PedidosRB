@@ -4,9 +4,13 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
 
@@ -40,6 +44,7 @@ class ProduccionAdapter(
         val chipEstado = view.findViewById<Chip>(R.id.chipProdEstado)
         val stripe     = view.findViewById<View>(R.id.stripeProduccion)
         val btnCambiar = view.findViewById<MaterialButton>(R.id.btnCambiarEstado)
+        val ivImagen   = view.findViewById<ImageView>(R.id.ivProdImagen)
 
         fun bind(pedido: Pedido) {
             tvNombre.text   = pedido.nombre_trabajo
@@ -95,6 +100,18 @@ class ProduccionAdapter(
             } else {
                 btnCambiar.visibility = View.VISIBLE
                 btnCambiar.setOnClickListener { onCambiarEstado(pedido) }
+            }
+
+            // Imagen del diseño
+            val url = pedido.imagen_url
+            if (!url.isNullOrBlank()) {
+                ivImagen.visibility = View.VISIBLE
+                Glide.with(ivImagen.context)
+                    .load(url)
+                    .apply(RequestOptions().transform(RoundedCorners(16)))
+                    .into(ivImagen)
+            } else {
+                ivImagen.visibility = View.GONE
             }
         }
     }

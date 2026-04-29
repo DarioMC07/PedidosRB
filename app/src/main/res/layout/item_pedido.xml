@@ -121,6 +121,16 @@
                 tools:text="Precio: $25.00"
                 xmlns:tools="http://schemas.android.com/tools" />
 
+            <!-- Imagen del diseño (visible solo si existe) -->
+            <ImageView
+                android:id="@+id/ivPedidoImagen"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Imagen del diseño"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -48,4 +48,13 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:34.11.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
+
+    // HTTP para subir imágenes a Cloudinary
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // Carga de imágenes remotas
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // Coroutines para subida en background
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }

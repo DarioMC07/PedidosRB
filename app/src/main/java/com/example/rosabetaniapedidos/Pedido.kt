@@ -18,6 +18,7 @@ data class Pedido(
     var gramaje: String = "",
     var estado: String = "Pendiente",
     var precio_cotizado: Double? = null,
+    var imagen_url: String? = null,
     @ServerTimestamp
     var fecha_creacion: Timestamp? = null
 )
