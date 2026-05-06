@@ -7,10 +7,23 @@
     <color name="rb_green">#0B7A2E</color>
     <color name="rb_green_dark">#075622</color>
     <color name="rb_green_soft">#E6F4EA</color>
+    <color name="rb_green_vivid">#16A34A</color>
+    <color name="rb_green_accent">#22C55E</color>
 
     <!-- Surface -->
     <color name="rb_surface">#FFFFFFFF</color>
     <color name="rb_on_green">#FFFFFFFF</color>
+
+    <!-- Login light (white + green) theme -->
+    <color name="rb_login_bg_start">#F2FAF5</color>
+    <color name="rb_login_bg_end">#FFFFFF</color>
+    <color name="rb_login_card_bg">#FFFFFF</color>
+    <color name="rb_login_card_stroke">#C8E6D4</color>
+    <color name="rb_login_text_primary">#0D3320</color>
+    <color name="rb_login_text_secondary">#5A7A65</color>
+    <color name="rb_login_field_bg">#F7FCF9</color>
+    <color name="rb_login_field_stroke">#B8DEC8</color>
+    <color name="rb_login_hint">#7AAF90</color>
 
     <!-- Client / form (reference style) -->
     <color name="rb_grey_bg">#F5F5F5</color>

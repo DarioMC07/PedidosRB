@@ -7,119 +7,227 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
     android:fillViewport="true"
-    android:padding="20dp"
     tools:context=".LoginActivity">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
+        <!-- Decorative top-right glow orb -->
         <ImageView
-            android:id="@+id/ivLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/logo_content_description"
-            android:maxHeight="150dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/logo_rosa_betania" />
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-60dp"
+            android:layout_marginEnd="-60dp"
+            android:src="@drawable/bg_login_orb"
+            android:contentDescription="@null"
+            android:alpha="0.6" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/loginCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/rb_surface"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="6dp">
+        <!-- Decorative bottom-left glow orb -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginStart="-40dp"
+            android:src="@drawable/bg_login_orb"
+            android:contentDescription="@null"
+            android:alpha="0.4" />
 
-            <LinearLayout
+        <!-- Main content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="52dp"
+            android:paddingBottom="32dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/foto_logo"
+                android:contentDescription="@string/logo_content_description" />
+
+            <!-- Thin accent divider -->
+            <View
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/rb_green_vivid" />
+
+            <!-- LOGIN CARD -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/loginCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="8dp">
 
-                <TextView
-                    android:id="@+id/tvTitle"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/login_title"
-                    android:textColor="@color/rb_green_dark"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="28dp">
 
-                <TextView
-                    android:id="@+id/tvSubtitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/login_subtitle"
-                    android:textColor="#5A5A5A"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilUser"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:hint="@string/login_user_label"
-                    app:boxStrokeColor="@color/rb_green"
-                    app:hintTextColor="@color/rb_green_dark">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etUser"
+                    <!-- Greeting -->
+                    <TextView
+                        android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:text="@string/login_title"
+                        android:textColor="#0D3320"
+                        android:textSize="26sp"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="-0.02" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilPassword"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:hint="@string/login_password_label"
-                    app:boxStrokeColor="@color/rb_green"
-                    app:endIconMode="password_toggle"
-                    app:hintTextColor="@color/rb_green_dark">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etPassword"
+                    <TextView
+                        android:id="@+id/tvSubtitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginTop="6dp"
+                        android:text="@string/login_subtitle"
+                        android:textColor="#5A7A65"
+                        android:textSize="14sp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:layout_marginTop="18dp"
-                    android:text="@string/login_button"
-                    android:textColor="@color/rb_on_green"
-                    app:backgroundTint="@color/rb_green"
-                    app:cornerRadius="14dp" />
+                    <!-- Email field label -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="Correo electrónico"
+                        android:textColor="@color/rb_green"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"
+                        android:textAllCaps="true"
+                        android:fontFamily="sans-serif-medium" />
 
-                <TextView
-                    android:id="@+id/tvForgot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="14dp"
-                    android:padding="8dp"
-                    android:text="@string/login_forgot"
-                    android:textColor="@color/rb_green_dark"
-                    android:textSize="13sp" />
+                    <!-- Email field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilUser"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login_user_label"
+                        app:boxBackgroundColor="#F7FCF9"
+                        app:boxStrokeColor="@color/rb_green"
+                        app:boxStrokeWidth="1dp"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        app:hintTextColor="@color/rb_green"
+                        app:startIconDrawable="@drawable/ic_person_24"
+                        app:startIconTint="@color/rb_green">
 
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="#0D3320"
+                            android:textColorHint="#7AAF90" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password field label -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="Contraseña"
+                        android:textColor="@color/rb_green"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"
+                        android:textAllCaps="true"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <!-- Password field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login_password_label"
+                        app:boxBackgroundColor="#F7FCF9"
+                        app:boxStrokeColor="@color/rb_green"
+                        app:boxStrokeWidth="1dp"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        app:hintTextColor="@color/rb_green"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/rb_green"
+                        app:startIconDrawable="@drawable/ic_lock_24"
+                        app:startIconTint="@color/rb_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="#0D3320"
+                            android:textColorHint="#7AAF90" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Login button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="28dp"
+                        android:text="@string/login_button"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.02"
+                        app:backgroundTint="@color/rb_green"
+                        app:cornerRadius="16dp"
+                        app:elevation="4dp"
+                        app:rippleColor="#3322C55E" />
+
+                    <!-- Forgot password -->
+                    <TextView
+                        android:id="@+id/tvForgot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="14dp"
+                        android:padding="8dp"
+                        android:text="@string/login_forgot"
+                        android:textColor="@color/rb_green"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Version footer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Rosa Betania · Pedidos"
+                android:textColor="#A8C8B4"
+                android:textSize="11sp"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+    </FrameLayout>
+
 </androidx.core.widget.NestedScrollView>

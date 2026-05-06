@@ -28,7 +28,7 @@
             android:adjustViewBounds="true"
             android:contentDescription="@string/logo_content_description"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo_rosa_betania" />
+            android:src="@drawable/foto_logo" />
 
         <TextView
             android:layout_width="wrap_content"
